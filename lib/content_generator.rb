@@ -24,8 +24,8 @@ module ContentGenerator
       when TrueClass
         attr_map = self.content_generators[:default] #~FC001
       when Symbol
-        unless self.content_generators.has_key?[generator]
-          self.content_generators[generator] = {}
+        unless self.content_generators.has_key?(generator)
+          self.content_generators[generator] = []
         end
         attr_map = self.content_generators[generator]
       else
