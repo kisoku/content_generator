@@ -54,7 +54,7 @@ module ContentGenerator
 
   extend ClassMethods
 
-  def render(generator: :default)
+  def render(generator = :default)
     buf = String.new
     buf << header if header
     self.class.content_generators[generator].each do |attr|
