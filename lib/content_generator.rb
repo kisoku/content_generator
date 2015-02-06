@@ -33,6 +33,8 @@ module ContentGenerator
       end
 
       attr_map << name
+
+      super
     end
 
     # thanks noah for helping me figure this out
