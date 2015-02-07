@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'fuubar', '~> 2.0.0'
   s.add_development_dependency 'halite', '~> 1.0.0.rc.1'
   s.add_development_dependency 'pry'
+  s.add_development_dependency 'poise'
   s.add_development_dependency 'simplecov', '~> 0.9.1'
   s.add_development_dependency 'test-kitchen', '~> 1.3.1'
   s.add_development_dependency 'kitchen-vagrant'
@@ -31,6 +32,4 @@ Gem::Specification.new do |s|
   s.executables = []
   s.require_path = 'lib'
   s.files = %w(LICENSE README.md CHANGELOG.md Rakefile) + Dir.glob('{lib,spec}/**/*', File::FNM_DOTMATCH).reject {|f| File.directory?(f)}
-
-  s.files = `git ls-files`.split($/)
 end
