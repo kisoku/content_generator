@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec-its', '~> 1.1.0'
   s.add_development_dependency 'chefspec', '~> 4.2'
   s.add_development_dependency 'fuubar', '~> 2.0.0'
-  s.add_development_dependency 'halite', '~> 1.0.0.rc.1'
+  s.add_development_dependency 'halite', '~> 1.0.13'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'poise', '~> 2.5'
   s.add_development_dependency 'simplecov', '~> 0.9.1'
