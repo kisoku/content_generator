@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 class BaseClassHelper < Chef::Resource
-  include Poise::Resource::LWRPPolyfill
+  include Poise::Helpers::LWRPPolyfill
   include ContentGenerator
 
   attribute :squee, kind_of: String, generator: true
@@ -13,7 +13,7 @@ describe ContentGenerator do
     it 'raises when passed an invalid generator name' do
       expect {
         Class.new(Chef::Resource) do
-          include Poise::Resource::LWRPPolyfill
+          include Poise::Helpers::LWRPPolyfill
           include ContentGenerator
 
           attribute :blam, generator: 'gronk'
@@ -38,7 +38,7 @@ describe ContentGenerator do
   describe '#render' do
     describe 'default generator' do
       resource('default_test') do
-        include Poise::Resource::LWRPPolyfill
+        include Poise::Helpers::LWRPPolyfill
         include ContentGenerator
 
         attribute :herp, kind_of: String, generator: true, default: "bah"
@@ -52,7 +52,7 @@ describe ContentGenerator do
 
     describe 'named generator' do
       resource('named_test') do
-        include Poise::Resource::LWRPPolyfill
+        include Poise::Helpers::LWRPPolyfill
         include ContentGenerator
         attribute :derp, kind_of: String, generator: :scrooge, default: "humbug"
       end
@@ -65,7 +65,7 @@ describe ContentGenerator do
 
     describe 'default formatters' do
       resource 'default_formatter_test' do
-        include Poise::Resource::LWRPPolyfill
+        include Poise::Helpers::LWRPPolyfill
         include ContentGenerator
 
         attribute :foo, kind_of: String, default: "abc", generator: true
@@ -87,7 +87,7 @@ describe ContentGenerator do
 
     describe 'per attribute formatters' do
       resource 'attribute_formatter_test' do
-        include Poise::Resource::LWRPPolyfill
+        include Poise::Helpers::LWRPPolyfill
         include ContentGenerator
 
         attribute :baz, kind_of: String, default: "xyz", generator: true

@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'fuubar', '~> 2.0.0'
   s.add_development_dependency 'halite', '~> 1.0.0.rc.1'
   s.add_development_dependency 'pry'
-  s.add_development_dependency 'poise'
+  s.add_development_dependency 'poise', '~> 2.5'
   s.add_development_dependency 'simplecov', '~> 0.9.1'
   s.add_development_dependency 'test-kitchen', '~> 1.3.1'
   s.add_development_dependency 'kitchen-vagrant'
